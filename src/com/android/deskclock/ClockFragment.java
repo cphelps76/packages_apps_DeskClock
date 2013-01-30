@@ -67,7 +67,6 @@ public class ClockFragment extends DeskClockFragment implements OnSharedPreferen
                     || intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED);
             if (changed || intent.getAction().equals(Utils.ACTION_ON_QUARTER_HOUR)) {
                 Utils.updateDate(mDateFormat, mDateFormatForAccessibility,mClockFrame);
-                Utils.updateColors(context, mClockFrame);
                 if (mAdapter != null) {
                     // *CHANGED may modify the need for showing the Home City
                     if (changed && (mAdapter.hasHomeCity() != mAdapter.needHomeCity())) {
@@ -184,7 +183,6 @@ public class ClockFragment extends DeskClockFragment implements OnSharedPreferen
 
         Utils.updateDate(mDateFormat, mDateFormatForAccessibility,mClockFrame);
         Utils.refreshAlarm(getActivity(), mClockFrame);
-        Utils.updateColors(getActivity(), mClockFrame);
     }
 
     @Override
