@@ -234,16 +234,6 @@ public class SettingsActivity extends PreferenceActivity
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
-        listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
-        String action = listPref.getValue();
-        updateFlipActionSummary(listPref, action);
-        listPref.setOnPreferenceChangeListener(this);
-
-        listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
-        String shake = listPref.getValue();
-        updateShakeActionSummary(listPref, shake);
-        listPref.setOnPreferenceChangeListener(this);
-
 
         listPref = (ListPreference) findPreference(KEY_FLIP_ACTION);
         String action = listPref.getValue();
@@ -254,6 +244,7 @@ public class SettingsActivity extends PreferenceActivity
         String shake = listPref.getValue();
         updateShakeActionSummary(listPref, shake);
         listPref.setOnPreferenceChangeListener(this);
+
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
         CheckBoxPreference hideStatusbarIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
