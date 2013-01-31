@@ -273,12 +273,7 @@ public class SettingsActivity extends PreferenceActivity
         clockDateColor.setOnPreferenceChangeListener(this);
 
         ColorPickerPreference clockAlarmColor = (ColorPickerPreference) findPreference(KEY_DIGITAL_CLOCK_ALARM_COLOR);
-        clockAlarmColor.setOnPreferenceChangeListener(this);
-
-        listPref = (ListPreference) findPreference(KEY_SHAKE_ACTION);
-        String shake = listPref.getValue();
-        updateShakeActionSummary(listPref, shake);
-        listPref.setOnPreferenceChangeListener(this);
+        clockAlarmColor.setOnPreferenceChangeListener(this);;
 
         SnoozeLengthDialog snoozePref = (SnoozeLengthDialog) findPreference(KEY_ALARM_SNOOZE);
         snoozePref.setSummary();
