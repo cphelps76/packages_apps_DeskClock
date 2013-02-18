@@ -23,7 +23,7 @@
         android:drawable="@color/transparent_white" />
 
     <item android:state_focused="true"
-        android:drawable="@color/transparent_white" />
+        android:drawable="@color/transparent" />
 
     <item
         android:drawable="@color/transparent" />
