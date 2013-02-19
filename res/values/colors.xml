@@ -37,8 +37,8 @@
     <color name="alarm_default_background">#ff000000</color>
 
     <color name="clock_red">#ff4444</color>
-    <color name="clock_white">#33b5e5</color>
-    <color name="clock_gray">#80ffffff</color>
+    <color name="clock_white">#ff33b5e5</color>
+    <color name="clock_gray">#ff33b5e5</color>
     <color name="clock_blue">#ff33b5e5</color>
     <color name="notification_bg">#ff000000</color>
     <color name="alarm_selected_color">#aa0099cc</color>
