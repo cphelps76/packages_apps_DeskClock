@@ -71,6 +71,17 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if (Log.LOGV) Log.v("Downgrading alarms database from version " + oldVersion + " to "
+                + newVersion);
+
+        db.execSQL("DROP TABLE alarms;");
+        onCreate(db);
+
+        if (Log.LOGV) Log.v("Alarms database downgrade done.");
+    }
+
     Uri commonInsert(ContentValues values) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
